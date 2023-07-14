@@ -1,11 +1,10 @@
 ![screenshot](screenshot.png)
 
 # Wii U Recovery Menu
-A simple recovery menu running on the IOSU for unbricking, which can be booted using [udpih](https://github.com/GaryOderNichts/udpih). 
+A simple recovery menu running on the IOSU for unbricking, which can be booted using [udpih](https://github.com/GaryOderNichts/udpih).
+This is a mod allowing for the Coldboot title to be changed to Health and Safety (H&S) in order to coldboot the Payloadloader without blocking updates in order to repair a [lite-bricked console](https://dardelhmb.github.io/lite-unbrick/#/). It should not permenantly set to H&S with this method and you will get no support doing so.
+Other than that it is functionally identical to recovery_menu v0.5
 
-> :information_source: Some Wii U's don't show any TV output, if it hasn't been configured properly before.  
-> If that's the case download the `recovery_menu_dc_init` file and rename it to `recovery_menu`.  
-> This build does display controller initialization and might fix the issue.  
 > Note that this build only outputs 480p and has no GamePad output!
 
 > :information_source: The recovery menu updates the power LED for debugging. The following patterns are used:  
@@ -21,6 +20,12 @@ Possible options are:
 - `Wii U Menu (JPN) - 00050010-10040000`
 - `Wii U Menu (USA) - 00050010-10040100`
 - `Wii U Menu (EUR) - 00050010-10040200`
+- `Health and Safety Infomation (JPN) - 00050010-1004E000`
+- `Health and Safety Infomation (USA) - 00050010-1004E100`
+- `Health and Safety Infomation (EUR) - 00050010-1004E200`
+- `System Settings (JPN) - 00050010-10047000`
+- `System Settings (USA) - 00050010-10047100`
+- `System Settings (EUR) - 00050010-10047200`
 
 On non-retail systems the following additional options are available:
 - `System Config Tool - 00050010-1F700500`
@@ -89,11 +94,14 @@ docker run -it --rm -v ${PWD}:/project recoverybuilder make
 # build the menu with display controller initialization
 docker run -it --rm -v ${PWD}:/project recoverybuilder make DC_INIT=1
 ```
+Note for building: If you intend on modifying the code, I recommend building it in a seperate copy, as while building with Linux (Ubuntu or Ubuntu based distros at least) the build files tend to get locked to root permissions, making them difficult to remove.
 
 ## Credits
+- [GaryOderNichts](https://github.com/GaryOderNichts) for the original [recovery_menu](https://github.com/GaryOderNichts/recovery_menu) (bulk of the code lmao) and [UDPIH](https://github.com/GaryOderNichts/udpih)
 - [@Maschell](https://github.com/Maschell) for the [network configuration types](https://github.com/devkitPro/wut/commit/159f578b34401cd4365efd7b54b536154c9dc576)
 - [@dimok789](https://github.com/dimok789) for [mocha](https://github.com/dimok789/mocha)
 - [@hexkyz](https://github.com/hexkyz) for [hexFW](https://github.com/hexkyz/hexFW)
 - [@rw-r-r-0644](https://github.com/rw-r-r-0644) for the lolserial code and display configuration info
 - [decaf-emu](https://github.com/decaf-emu/decaf-emu) for a lot of IOS documentation
 - [@GerbilSoft](https://github.com/GerbilSoft) for adding the initial "System Information" screen, visual improvements, region unbricking, ...
+- [Lazr](https://github.com/Lazr1026) used her recovery_menu mod as a base to figure out how to add Coldboot titles and get them to show up (I hope you don't mind)
