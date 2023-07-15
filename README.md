@@ -5,6 +5,7 @@ A simple recovery menu running on the IOSU for unbricking, which can be booted u
 
 This is a mod allowing for the Coldboot title to be changed to Health and Safety (H&S) in order to coldboot the Payloadloader without blocking updates in order to repair a [lite-bricked console](https://dardelhmb.github.io/lite-unbrick/#/). It should not permenantly set to H&S with this method and you will get no support doing so.
 Other than that it is functionally identical to recovery_menu v0.5
+(If you want to merge this repo into the original, let me know, I'd be happy to)
 
 
 > :information_source: The recovery menu updates the power LED for debugging. The following patterns are used:  
