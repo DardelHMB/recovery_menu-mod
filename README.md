@@ -1,5 +1,8 @@
 ![screenshot](screenshot.png)
 
+## NOTICE:
+I'm realising that the H&S titles may be incorrect. I plan to fix this soon.
+
 # Wii U Recovery Menu
 A simple recovery menu running on the IOSU for unbricking, which can be booted using [udpih](https://github.com/GaryOderNichts/udpih).
 
