@@ -155,7 +155,7 @@ int drawMenu(const char* title, const Menu* menu, size_t count,
         gfx_print(16, ypos, 0, link_prefix);
         static const int xpos = 16 + CHAR_SIZE_DRC_X * sizeof(link_prefix);
         gfx_set_font_color(COLOR_LINK);
-        gfx_print(xpos, ypos, GfxPrintFlag_Underline, "https://github.com/GaryOderNichts/recovery_menu");
+        gfx_print(xpos, ypos, GfxPrintFlag_Underline, "https://github.com/DardelHMB/recovery_menu-mod");
     }
 
     uint8_t cur_flag = 0;
@@ -993,7 +993,7 @@ int menuThread(void* arg)
 
     int selected = 0;
     while (1) {
-        selected = drawMenu("Wii U Recovery Menu v" VERSION_STRING " by GaryOderNichts",
+        selected = drawMenu("Wii U Recovery Menu v" VERSION_STRING " by GaryOderNichts (mod by DardelHMB)",
             mainMenuOptions, ARRAY_SIZE(mainMenuOptions), selected,
             MenuFlag_ShowGitHubLink, 16, 16+8+2+8);
         if (selected >= 0 && selected < ARRAY_SIZE(mainMenuOptions)) {
