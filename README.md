@@ -1,7 +1,7 @@
 ![screenshot](screenshot.png)
 
 ## NOTICE:
-I'm realising that the H&S titles may be incorrect. I plan to fix this soon.
+Despite the (as of now) more commits than the original, this mod is not all that different to the original, all I did was change a little bit.
 
 # Wii U Recovery Menu
 A simple recovery menu running on the IOSU for unbricking, which can be booted using [udpih](https://github.com/GaryOderNichts/udpih).
